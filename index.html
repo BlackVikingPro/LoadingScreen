@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+<script> 
+//paste this code under head tag or in a seperate js file.
+// Wait for window load
+$(window).load(function() {
+// Animate loader off screen
+$(".se-pre-con").fadeOut("slow");;
+});
+</script>
+
+</head>
+<body>
+<!-- This div must be right after the body tag -->
+	<div class="se-pre-con"></div>
+
+		<p>
+			Hello, World. Notice the loading screen when you came to this page? <br />
+			This is a new cool feature that was added into my <a href="http://blackvikingpro.com">home page</a> and my <a href="http://lab.blackvikingpro.com">dev lab.</a> <br />
+			This code can all be found on <a href="https://github.com/BlackVikingPro/LoadingScreen">GitHub.</a>
+		</p>
+
+	<style>
+	/* Paste this css to your style sheet file or under head tag */
+	/* This only works with JavaScript, 
+	if it's not present, don't show loader */
+	.no-js #loader { display: none;  }
+	.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+	.se-pre-con {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		background: url(http://lab.blackvikingpro.com/dev/loadingpage/cube-rotate.gif) center no-repeat #fff;
+	}
+	</style>
+
+</body>
+</html>
